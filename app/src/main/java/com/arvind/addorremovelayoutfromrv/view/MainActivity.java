@@ -1,4 +1,4 @@
-package com.arvind.addorremovelayoutfromrv;
+package com.arvind.addorremovelayoutfromrv.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
+import com.arvind.addorremovelayoutfromrv.R;
 import com.arvind.addorremovelayoutfromrv.adapter.CustomAddMoreAdapter;
 import com.arvind.addorremovelayoutfromrv.databinding.ActivityMainBinding;
 import com.arvind.addorremovelayoutfromrv.model.AddItemsModel;
@@ -20,10 +21,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mBinding;
-//    List<AddItemsModel> addItemsModelArrayList = new ArrayList<>();
+    //    List<AddItemsModel> addItemsModelArrayList = new ArrayList<>();
     ArrayList<AddItemsModel> models = new ArrayList<>();
     CustomAddMoreAdapter adapter;
-    int position = 0;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void initialize() {
         initAdapter();
         mBinding.tvLabelItemAddMore.setOnClickListener(view -> {
-            insertMethod("","","");
+            insertMethod("", "", "");
         });
     }
 

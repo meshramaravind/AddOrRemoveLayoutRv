@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/drawable/horizontal_dotted_line.xml" value="0.1515" />
         <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1515" />
         <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/dialog_layout_add_more2.xml" value="0.203125" />
         <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/items_add_more.xml" value="0.2" />
         <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/items_auto_complete_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/items_layout_add_more2.xml" value="0.25" />
+        <entry key="..\:/Users/Arvind/AndroidStudioProjects/AddOrRemoveLayoutFromRv/app/src/main/res/layout/items_transaction_add_more.xml" value="0.203125" />
       </map>
     </option>
   </component>

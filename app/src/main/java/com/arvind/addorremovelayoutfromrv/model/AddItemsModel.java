@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class AddItemsModel implements Serializable {
     public int id;
     public String transactionType;
-    public String amount;
+    public String title;
     public String totalAmount;
 
     public int getId() {
@@ -24,12 +24,12 @@ public class AddItemsModel implements Serializable {
         this.transactionType = transactionType;
     }
 
-    public String getAmount() {
-        return amount;
+    public String getTitle() {
+        return title;
     }
 
-    public void setAmount(String amount) {
-        this.amount = amount;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getTotalAmount() {
@@ -38,5 +38,15 @@ public class AddItemsModel implements Serializable {
 
     public void setTotalAmount(String totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "AddItemsModel{" +
+                "id=" + id +
+                ", transactionType='" + transactionType + '\'' +
+                ", title='" + title + '\'' +
+                ", totalAmount='" + totalAmount + '\'' +
+                '}';
     }
 }

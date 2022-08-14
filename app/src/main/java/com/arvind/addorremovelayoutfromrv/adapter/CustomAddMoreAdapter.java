@@ -53,7 +53,7 @@ public class CustomAddMoreAdapter extends RecyclerView.Adapter<CustomAddMoreAdap
         final AddItemsModel model = list.get(position);
         if (model.getTransactionType() != null) {
             holder.binding.optionsEtSelectTransactionTypeItems.setText(model.getTransactionType());
-            holder.binding.etAmountAddItems.setText(model.getAmount());
+            holder.binding.etAmountAddItems.setText(model.getTitle());
             holder.binding.etTotalAmountAddItems.setText(model.getTotalAmount());
         }
 

@@ -7,28 +7,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_text_title_select_tax_ledger_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Transaction"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_text_content_select_tax_ledger_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax charges will be added to additional charges"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_title_select_tax_ledger_items" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_select_transaction_type_items"
+            android:id="@+id/til_select_tax_ledger_additional_charges_items"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
             android:hint="Select Transaction"
-            app:layout_constraintEnd_toStartOf="@+id/icon_delete_add_items"
+            app:layout_constraintEnd_toStartOf="@+id/icon_delete_additional_charges_column"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_content_select_tax_ledger_items">
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/options_et_select_transaction_type_items"
+                android:id="@+id/options_et_select_tax_ledger_additional_charges_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="false"
                 android:completionThreshold="3"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:lines="1"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/icon_delete_add_items"
+            android:id="@+id/icon_delete_additional_charges_column"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
             android:layout_marginStart="@dimen/_5sdp"
@@ -37,50 +61,52 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/ic_baseline_cancel_24"
+            android:src="@drawable/icon_circle_close"
             android:textColor="@color/color_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/til_select_transaction_type_items"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/til_select_tax_ledger_additional_charges_items"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_content_select_tax_ledger_items" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_amount_add_items"
+            android:id="@+id/til_charges_in_percent_items"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:hint="Title"
-            app:layout_constraintEnd_toStartOf="@+id/til_total_amount_add_items"
+            app:layout_constraintEnd_toStartOf="@+id/til_charges_in_amount_items"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_select_transaction_type_items">
+            app:layout_constraintTop_toBottomOf="@+id/til_select_tax_ledger_additional_charges_items">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_amount_add_items"
+                android:id="@+id/et_charges_in_percent_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_total_amount_add_items"
+            android:id="@+id/til_charges_in_amount_items"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_35sdp"
-            android:hint="Total In Amount"
+            android:hint="Amount"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/til_amount_add_items"
-            app:layout_constraintTop_toBottomOf="@+id/til_select_transaction_type_items">
+            app:layout_constraintStart_toEndOf="@+id/til_charges_in_percent_items"
+            app:layout_constraintTop_toBottomOf="@+id/til_select_tax_ledger_additional_charges_items">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_total_amount_add_items"
+                android:id="@+id/et_charges_in_amount_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
 

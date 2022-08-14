@@ -12,5 +12,6 @@
     <color name="color_blue">#4981DD</color>
     <color name="color_divider">#1FFFFFFF</color>
     <color name="color_white_light">#F4F4F5</color>
+    <color name="color_gray_dark">#555555</color>
 
 </resources>
