@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_add_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_select_transaction_type_items"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Select Transaction"
+            app:layout_constraintEnd_toStartOf="@+id/icon_delete_add_items"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/options_et_select_transaction_type_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionThreshold="3"
+                android:lines="1"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_delete_add_items"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:textColor="@color/color_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/til_select_transaction_type_items"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_amount_add_items"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Amount"
+            app:layout_constraintEnd_toStartOf="@+id/til_total_amount_add_items"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_select_transaction_type_items">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_amount_add_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_total_amount_add_items"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:hint="Total In Amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/til_amount_add_items"
+            app:layout_constraintTop_toBottomOf="@+id/til_select_transaction_type_items">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_total_amount_add_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
